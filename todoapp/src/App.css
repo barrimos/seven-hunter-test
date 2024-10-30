@@ -1,0 +1,72 @@
+*, *::after, *::before{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container{
+  width: 100%;
+  max-width: 920px;
+  height: 100svh;
+  margin: 0 auto;
+  padding: 15px;
+  .row{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+    height: 100%;
+    .col-4{
+      position: relative;
+      width: 100%;
+      max-width: 33.3333%;
+      height: auto;
+      padding: 0 15px;
+    }
+  }
+}
+
+.listsWrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.typeWrapper{
+  font-size: .9em;
+  width: 100%;
+  border: 2px solid #eee;
+  height: 100%;
+  .headType{
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    font-weight: 500;
+  }
+  .headType, .listTodo{
+    list-style: none;
+  }
+  .listTodo{
+    border: none;
+  }
+}
+.listItem, .listTodo{
+  border: 2px solid #eee;
+  &:nth-child(n + 2) {
+    margin: 4px auto;
+  }
+  height: 40px;
+  width: 90%;
+  font-size: .9em;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  cursor: pointer;
+}
